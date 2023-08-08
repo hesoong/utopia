@@ -1,0 +1,88 @@
+baseurl      = "localhost"
+title        = "Song's Blog"
+languageCode = "zh"
+theme        = "hello-friend-ng"
+paginate     = 10
+hasCJKLanguage = true # 字数统计添加中文支持
+enableGitInfo = true # 使能git信息
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+
+[author]
+  name   = "Song"
+  email  = "Mr.heesong@gmail.com"
+
+[params]
+  dateform        = "2006-01-02"
+  dateformShort   = "2006-01-02"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "Learn, Record and Share"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = true
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = true
+
+  # Metadata mostly used in document's head
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
+  images = [""]
+  comments = true
+
+  # 自定义CSS
+  customCSS = ['/css/main.css']
+
+  # 自定义JS
+  # customJS = ['/js/anchorforid.js', '/js/fuse.min.js', '/js/search.js']
+  customJS = ['/js/anchorforid.js', '/js/main.js']
+
+
+  [params.gitalk]
+    owner = "justinjbird"
+    repo = "site-blog-comments"
+    clientId = "05963a3ef57aeeec1238d"
+    clientSecret = "5d7f9c71119f9878de78dc72d90cd90064b43ff4"
+  
+[[params.social]]
+  name = "email"
+  url  = "mailto:Mr.heesong@gmail.com"
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/hesoong"
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages.en.params]
+  # title = "Song's blog"
+  # subtitle = "A simple theme for Hugo"
+  # keywords = ""
+  # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # readOtherPosts = "Read other posts"
+[params.logo]
+  logoText = "rm -rf world"
+  logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+
+  # And you can even create generic menu
+[[menu.main]]
+  identifier = "blog"
+  name       = "Blog"
+  url        = "/posts"
+[[menu.main]]
+  identifier = "tag"
+  name       = "Tag"
+  url        = "/tags"
