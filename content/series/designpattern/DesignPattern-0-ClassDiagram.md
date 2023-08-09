@@ -6,9 +6,8 @@ toc: true
 tags:
 - DesignPattern 
 - 类图
-categories:
-- 工作与技术
-- 设计模式
+weight: 10
+
 ---
 
 ## 类图六大关系

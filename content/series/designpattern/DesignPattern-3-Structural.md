@@ -4,10 +4,8 @@ date: 2021-10-14 14:57:04
 updated: 2021-10-14 14:57:04
 toc: true
 tags:
-categories:
-
-- 工作与技术
-- 设计模式
+  - DesignPattern 
+weight: 40
 
 ---
 

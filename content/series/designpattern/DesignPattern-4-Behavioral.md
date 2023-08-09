@@ -4,10 +4,8 @@ date: 2021-10-15 10:27:04
 updated: 2021-10-15
 toc: true
 tags:
-categories:
-
-- 工作与技术
-- 设计模式
+  - DesignPattern 
+weight: 50
 ---
 
 ## 行为型模式

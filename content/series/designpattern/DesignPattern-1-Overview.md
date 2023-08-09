@@ -4,9 +4,8 @@ date: 2020-05-03 13:53:43
 updted: 2020-05-03 13:53:43
 tags: 
  - DesignPattern 
-categories:
-- 工作与技术
-- 设计模式
+weight: 20
+
 ---
 ## 设计模式的七大设计原则
 

@@ -5,8 +5,8 @@ theme        = "hello-friend-ng"
 paginate     = 10
 hasCJKLanguage = true # 字数统计添加中文支持
 enableGitInfo = true # 使能git信息
+gitUrl = 'https://github.com/rectcircle/rectcircle-blog/commit/'
 copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-
 
 [author]
   name   = "Song"
@@ -22,17 +22,17 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   homeSubtitle = "Learn, Record and Share"
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = true
+  disableReadOtherPosts = false
 
   # Enable sharing buttons, if you like
-  enableSharingButtons = true
+  enableSharingButtons = false
   
   # Show a global language switcher in the navigation bar
-  enableGlobalLanguageMenu = true
+  enableGlobalLanguageMenu = false
 
   # Metadata mostly used in document's head
   description = "My new homepage or blog"
-  keywords = "homepage, blog"
+  keywords = "js,javascript,nodejs,jquery,css,sass,gulp,html,git,java,hibernate,spring,maven,mysql,sql,linux,acm,架构,前端,后端,原创,编程,开发,算法,运维,云计算,网络,互联网"
   images = [""]
   comments = true
 
@@ -43,6 +43,13 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   # customJS = ['/js/anchorforid.js', '/js/fuse.min.js', '/js/search.js']
   customJS = ['/js/anchorforid.js', '/js/main.js']
 
+  [params.logo]
+    logoText = "rm -rf world"
+    logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
 
   [params.gitalk]
     owner = "justinjbird"
@@ -50,12 +57,12 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
     clientId = "05963a3ef57aeeec1238d"
     clientSecret = "5d7f9c71119f9878de78dc72d90cd90064b43ff4"
   
-[[params.social]]
-  name = "email"
-  url  = "mailto:Mr.heesong@gmail.com"
-[[params.social]]
-  name = "github"
-  url  = "https://github.com/hesoong"
+  [[params.social]]
+    name = "email"
+    url  = "mailto:Mr.heesong@gmail.com"
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/hesoong"
 
 [taxonomies]
     category = "blog"
@@ -68,13 +75,6 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   # keywords = ""
   # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # readOtherPosts = "Read other posts"
-[params.logo]
-  logoText = "rm -rf world"
-  logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
 
 
   # And you can even create generic menu
@@ -86,3 +86,7 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   identifier = "tag"
   name       = "Tag"
   url        = "/tags"
+[[menu.main]]
+  identifier = "series"
+  name       = "系列"
+  url        = "/series"

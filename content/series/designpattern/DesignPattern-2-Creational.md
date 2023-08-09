@@ -3,12 +3,12 @@
 title: 设计模式-创建型模式（第2篇）
 date: 2020-05-04 14:11:04
 updated: 2020-05-04 14:11:04
+# images: static/img
+toc: true
 tags: 
   - DesignPattern 
-categories:
+weight: 30
 
-- 工作与技术
-- 设计模式
 ---
 
 ## 创建型设计模式
