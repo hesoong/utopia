@@ -86,7 +86,7 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   identifier = "tag"
   name       = "Tag"
   url        = "/tags"
-[[menu.main]]
-  identifier = "series"
-  name       = "系列"
-  url        = "/series"
+# [[menu.main]]
+#   identifier = "series"
+#   name       = "系列"
+#   url        = "/series"

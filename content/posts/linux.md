@@ -3,8 +3,8 @@ title: linux的一些零星记录
 date: 2019-10-30
 updated: 2019-10-30
 tags:
-- linux
-- 命令归档
+    - linux
+
 categories: 
 - 工作与技术
 ---

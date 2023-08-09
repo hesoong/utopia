@@ -1,10 +1,10 @@
 ---
-title: spark集群-SSH免密登录
+title: ssh免密登录
 date: 2019-11-15 11:26:23
 updated: 2019-11-15
 tags: 
-- SSH免密登录
-- 小技巧
+- ssh
+- linux
 categories: 
 - 工作与技术
 ---
