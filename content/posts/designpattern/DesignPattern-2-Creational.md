@@ -35,18 +35,18 @@ weight: 30
 
    * 向外暴露一个静态的公共方法
 
-     ```java
-     class Singleton01{
-       private final static Singleton01 instance = new Singleton01();
-     
-       private Singleton01() {
-       }
-     
-       public static Singleton01 getInstance(){
-           return  instance;
-       }
-     }
-     ```
+ ```java
+ class Singleton01{
+   private final static Singleton01 instance = new Singleton01();
+ 
+   private Singleton01() {
+   }
+ 
+   public static Singleton01 getInstance(){
+	   return  instance;
+   }
+ }
+ ```
 
 2. 饿汉式（静态代码块）
 
@@ -59,91 +59,91 @@ weight: 30
 
    * 缺点：没有达到lazy loading 的效果，造成内存浪费
 
-     ```java
-     class Singleton02{
-       private final static Singleton02 instance;
+ ```java
+ class Singleton02{
+   private final static Singleton02 instance;
+ 
+   static {
+	   instance = new Singleton02();
+   }
+   private Singleton02() {
+   }
+ 
+   public static Singleton02 getInstance(){
+	   return  instance;
+   }
+ }
+ ```
      
-       static {
-           instance = new Singleton02();
-       }
-       private Singleton02() {
-       }
-     
-       public static Singleton02 getInstance(){
-           return  instance;
-       }
-     }
-     ```
-
 3. 懒汉式（线程不安全）不可用
 
    * 线程不安全 不可用
 
-     ```java
-     class Singleton01 {
-       private static Singleton01 instance;
-     
-       private Singleton01() {
-       }   
-     
-       public static Singleton01 getInstance() {
-           // 该方法不能保证线程安全
-           if (null == instance) {
-               instance = new Singleton01();
-           }
-           return instance;
-       }
-     }
-     ```
+ ```java
+ class Singleton01 {
+   private static Singleton01 instance;
+ 
+   private Singleton01() {
+   }   
+ 
+   public static Singleton01 getInstance() {
+	   // 该方法不能保证线程安全
+	   if (null == instance) {
+		   instance = new Singleton01();
+	   }
+	   return instance;
+   }
+ }
+ ```
 
 4. 懒汉式（线程安全，同步方法）
 
    * 可用但是在方法上加同步锁，效率低
 
-     ```java
-     class Singleton02 {
-       private static Singleton02 instance;
-     
-       private Singleton02() {
-       }
-     
-       /*
-       方法上加同步锁，效率低
-        */
-       public static synchronized Singleton02 getInstance() {
-           if (null == instance) {
-               instance = new Singleton02();
-           }
-           return instance;
-       }
-     }
-     ```
+ ```java
+ class Singleton02 {
+   private static Singleton02 instance;
+ 
+   private Singleton02() {
+   }
+ 
+   /*
+   方法上加同步锁，效率低
+	*/
+   public static synchronized Singleton02 getInstance() {
+	   if (null == instance) {
+		   instance = new Singleton02();
+	   }
+	   return instance;
+   }
+ }
+ ```
 
 5. 懒汉式（线程不安全， 同步代码块）
 
    * **不可用**
 
-     ```java
-     class Singleton03 {
-       private static Singleton03 instance;
-     
-       private Singleton03() {
-       }
-     
-       public static Singleton03 getInstance() {
-           // 该方法不能保证线程安全
-           if (null == instance) {
-               //此处线程不安全
-               synchronized (Singleton03.class) {
-                   instance = new Singleton03();
-               }
-           }
-           return instance;
-       }
-     }
-     ```
+ ```java
+ class Singleton03 {
+   private static Singleton03 instance;
+ 
+   private Singleton03() {
+   }
+ 
+   public static Singleton03 getInstance() {
+	   // 该方法不能保证线程安全
+	   if (null == instance) {
+		   //此处线程不安全
+		   synchronized (Singleton03.class) {
+			   instance = new Singleton03();
+		   }
+	   }
+	   return instance;
+   }
+ }
+ ```
 
-6. 双重检查
+ 6. 双重检查
 
    * 提供一个静态的公共方法，加入双重检查的代码，解决线程安全的问题，同时解决懒加载的问题
 
@@ -177,43 +177,43 @@ weight: 30
 
    * 因此该问题即解决了线程同步的问题同时也达到了懒加载的效果，***建议使用***
 
-     ```java
-     /**
-     * 静态内部类
-     */
-     class Singleton1 {
-       private Singleton1() {
-       }
-     
-       private static class SingletonInstance {
-           private static volatile Singleton1 INSTANCE = new Singleton1();
-       }
-     
-       public static Singleton1 getInstance() {
-           return SingletonInstance.INSTANCE;
-       }
-     }
-     ```
+ ```java
+ /**
+ * 静态内部类
+ */
+ class Singleton1 {
+   private Singleton1() {
+   }
+ 
+   private static class SingletonInstance {
+	   private static volatile Singleton1 INSTANCE = new Singleton1();
+   }
+ 
+   public static Singleton1 getInstance() {
+	   return SingletonInstance.INSTANCE;
+   }
+ }
+ ```
 
 8. 枚举
 
    * 借助jdk1.5中添加的枚举来实现单例模式，不仅能避免多线程同步的问题，而且还能防止反序列化重新创建对象
 
-   * 该方式时Effective Java 作者 Josh Bloch 提倡的方式
+   * 该方式是Effective Java 作者 Josh Bloch 提倡的方式
 
    * ***推荐使用***
 
-     ```java
-     /**
-     * 枚举
-     */   
-     enum Singleton2 {
-       INSTANCE;
-       public void sayOK() {
-           System.out.println("hha");
-       }
-     }
-     ```
+ ```java
+ /**
+ * 枚举
+ */   
+ enum Singleton2 {
+   INSTANCE;
+   public void sayOK() {
+	   System.out.println("hha");
+   }
+ }
+ ```
 
 ### 抽象工厂模式
 

@@ -1,7 +1,8 @@
 ---
 title: war包部署spring cloud 工程
-date: 2019-11-07 18:09:02
-updated: 2019-11-07
+date: 2019-09-07
+updated: 2019-09-07
+toc: true
 tags:
 - spring boot
 - war包部署
@@ -43,7 +44,6 @@ dependencies {
 /**
  * @Author: hesong
  * @Describe:
- * @Date: 2019/10/21 18:17
  */
 public class MCStartApplication extends SpringBootServletInitializer {
     @Override
@@ -51,10 +51,4 @@ public class MCStartApplication extends SpringBootServletInitializer {
         return builder.sources(ManagementCenterApplication.class);
     }
 }
-```
-
-[金蝶部署参考文档](file:///C:/Users/76797/Desktop/AAS-V9.0-201905221217/docs/html/guide/ch69s06.html)
-
-```shell
-jps |grep Bootstrap | awk '{print $1}' | xargs kill -s 9
 ```

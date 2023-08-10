@@ -1,7 +1,8 @@
 ---
 title: linux下java环境部署
-date: 2019-11-13 13:03:24
-updated: 2019-11-13
+date: 2019-01-13 13:03:24
+updated: 2019-01-13
+toc: true
 tags:
 - java
 - 环境搭建

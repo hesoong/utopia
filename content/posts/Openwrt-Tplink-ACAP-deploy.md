@@ -1,6 +1,6 @@
 ---
 title: Openwrt + Tplink ACAP deploy
-date: 2023-06-04 15:15:45
+date: 2023-06-04
 updated: 2023-06-04
 toc: true
 tags:

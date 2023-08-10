@@ -1,6 +1,6 @@
 ---
 title: Docker 笔记
-date: 2020-11-11 12:18:57
+date: 2020-11-11
 updated: 2020-11-11 12:18:57
 toc: true
 comments: true
@@ -9,6 +9,7 @@ categories:
 ---
 
 ## 一、Docker介绍
+***
 
 ### 1. 下载Docker依赖的环境
 
@@ -45,6 +46,7 @@ docker run hello-world
 ```
 
 ## 二、 Docker的中央仓库
+*** 
 
 ```shell
 # 1.Docker官方的中央仓库：这个仓库是镜像最全的，但是下载速度较慢。
@@ -64,6 +66,7 @@ systemctl restart docker
 ```
 
 ## 三、 镜像的操作
+***
 
 ### 1. 拉取镜像
 
@@ -101,6 +104,7 @@ docker tag 镜像id 新镜像名称：版本
 ```
 
 ## 四、 容器的操作
+***
 
 ### 1. 运行容器
 
@@ -164,3 +168,12 @@ docker rm 容器id
 #删除全部容器
 docker rm $(docker ps -qa)
 ```
+## 五、Dockerfile
+***
+
+//todo
+
+## 六、Docker Compose
+***
+
+//todo

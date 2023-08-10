@@ -1,7 +1,8 @@
 ---
 title: spark 单机环境搭建
-date: 2019-11-13 11:18:13
+date: 2019-11-13
 updated: 2019-11-13
+toc: true
 tags: 
 - spark 
 - 环境搭建
