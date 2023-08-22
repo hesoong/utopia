@@ -20,7 +20,7 @@ categories:
 
 > 项目是gradle构建
 
-### 更改build.gradle将springboot 服务打包成war
+### 更改`build.gradle`将Springboot 服务打包成war
 
 ```gradle
 apply plugin: 'java'

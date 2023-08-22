@@ -25,9 +25,7 @@ categories:
 
 -->[spark官网下载地址](http://spark.apache.org/downloads.html)<--
 
-![spark官网](spark官网.png)
-
-这里我下载的2.4.4版本:spark-2.4.4-bin-hadoop2.7.tgz
+这里我下载的2.4.4版本:`spark-2.4.4-bin-hadoop2.7.tgz`
 
 ### 解压缩
 
@@ -72,8 +70,6 @@ export PATH=$PATH:$SPARK_HOME/bin
 ```shell
 source /etc/profile
 ```
-
-![spark环境变量](spark环境变量.png)
 
 然后键盘按下 **“Esc”** 键退出编辑模式，输入 **:wq** 保存即可
 

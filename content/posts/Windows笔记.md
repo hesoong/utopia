@@ -16,7 +16,7 @@ net user administrator /active:no // 关闭
 
 ## Windows批处理（.bat）
 
-### .bat示例
+### .bat脚本示例
 
 ```bash
 @echo off
