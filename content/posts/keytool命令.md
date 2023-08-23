@@ -1,8 +1,8 @@
 ---
 title: "Keytool 命令"
 date: 2023-08-21T09:55:51+08:00
-draft: true
-toc: false
+draft: false
+toc: true
 images:
 tags:
   - 命令
@@ -15,6 +15,7 @@ tags:
 2. 可信任的证书实体（trusted certificate entries）——只包含公钥
 
 ## 命令
+### Help information
 ```shell
 ✗ keytool -h                                                                                                                       
 Key and Certificate Management Tool
@@ -43,7 +44,9 @@ Use "keytool -command_name --help" for usage of command_name.
 Use the -conf <url> option to specify a pre-configured options file.
 ```
 
-### `keytool -list`
+### keytool -list
+>列出密钥存储库中的证书信息
+#### Help information
 ```shell
 ✗ keytool -list -h
 keytool -list [OPTION]...
@@ -66,5 +69,39 @@ Options:
  -providerpath <list>    provider classpath
  -v                      verbose output
  -protected              password through protected mechanism
-
 ```
+#### Demo
+```shell
+# 查看证书列表
+keytool -list -keystore {path}/cacerts
+# 查看证书详细信息 以列表展示
+keytool -list -keystore -v {path}/cacerts 
+```
+### keytool -import
+>证书导入
+
+`certAlias` 证书别名, 不能重复 不区分大小写
+```shell
+# 导入证书
+keytool -import -alias {certAlias} -file '{path}/certfile.crt'  -keystore '{path}/java/openjdk/lib/security/cacerts'
+```
+### keytool -export
+>证书导出
+
+```shell
+keytool -exportcert \
+ -rfc \
+ -alias example \
+ -file cert.pem \
+ -keystore example.p12 \
+ -storepass changeit \
+ -storetype PKCS12 \
+ -v 
+```
+- `-rfc` : Will output in PEM format as defined by [RFC 1421](https://tools.ietf.org/html/rfc1421).
+- `-alias` : The alias of the entry encapsulated in the keystore. The chosen value should enhance the readability of the keystore entries, especially when the keystore contains multiple entries.
+- `-file` : The file to contain the exported X.509 certificate.
+- `-keystore` : The filename of the keystore.
+- `-storepass` : The current keystore password. We recommend leaving this option off and letting keytool prompt you instead of writing your password in plain text here.
+- `-storetype` : Recommended keystore types include PKCS12 and JKS. In this case, the keystore was of type PKCS12.
+- `-v` : Verbose output.

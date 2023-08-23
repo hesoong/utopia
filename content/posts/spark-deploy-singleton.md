@@ -124,14 +124,10 @@ cd /opt/spark-2.4.4/bin/
 
 spark 的一些默认端口
 
-```shell
-8080：master的webUI，sparkwebUI的端口
-
-7077：提交任务的端口
-
-8081：worker的webUI的端口
-
-18080：historyServer的webUI的端口
-
-4040：application的webUI的端口
+```yml
+8080: master的webUI，sparkwebUI的端口
+7077: 提交任务的端口
+8081: worker的webUI的端口
+18080: historyServer的webUI的端口
+4040: application的webUI的端口
 ```
