@@ -1,4 +1,4 @@
-baseurl      = "localhost"
+baseurl      = "https://hesoong.github.io/utopia"
 title        = "Song's Blog"
 languageCode = "zh"
 theme        = "hello-friend-ng"
@@ -45,7 +45,7 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
 
   [params.logo]
     logoText = "rm -rf world"
-    logoHomeLink = "/"
+    logoHomeLink = "/utopia"
     # or
     #
     # path = "/img/your-example-logo.svg"
