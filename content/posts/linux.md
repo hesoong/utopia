@@ -6,8 +6,6 @@ toc: true
 tags:
     - linux
 
-categories: 
-- 工作与技术
 ---
 
 ## 1. linux忘记root密码

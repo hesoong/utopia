@@ -6,8 +6,6 @@ toc: true
 tags:
 - java
 - 环境搭建
-categories: 
-- 工作与技术
 ---
 
 ## 下载JDK安装包

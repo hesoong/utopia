@@ -46,7 +46,7 @@ git commit	#进入vi编辑器编辑注释， 编辑好后用:wq命令提交
 git push -u origin abc # push本地仓库代码到远程'abc'分支
 git log #可查看git提交版本编号
 #然后在浏览器中进入git lab 提交merge请求
-git config commit.template uxsino.template	#运行模板
+git config commit.template myTemplate.template	#运行模板
 # 修改提交信息
 git commit --amend # 进入编辑器修改
 git commit --amend 'update information' # 直接更改为新输入的提交信息
@@ -88,23 +88,23 @@ git merge 'target' #merge target分支，target待合并的分支，git会自动
 git status #查看merge后的状态
 
 for example：
-bms@bms MINGW64 /c/SIMO (master)
+bms@bms MINGW64 /c/test (master)
 $ git pull
 Already up-to-date.
 
-bms@bms MINGW64 /c/SIMO (master)
+bms@bms MINGW64 /c/test (master)
 $ git checkout -b activemq_local
 Switched to a new branch 'activemq_local'
 
-bms@bms MINGW64 /c/SIMO (activemq_local)
+bms@bms MINGW64 /c/test (activemq_local)
 $ git merge activemq
-Auto-merging simo-commons/src/main/java/com/uxsino/commons/model/NeClass.java
-Auto-merging simo-commons/src/main/java/com/uxsino/commons/model/ITProtocol.java
-Auto-merging simo-collector/src/main/resources/connectors.xml
-CONFLICT (content): Merge conflict in simo-collector/src/main/resources/connectors.xml
+Auto-merging test-commons/src/main/java/com/song/commons/model/NeClass.java
+Auto-merging test-commons/src/main/java/com/song/commons/model/ITProtocol.java
+Auto-merging test-collector/src/main/resources/connectors.xml
+CONFLICT (content): Merge conflict in test-collector/src/main/resources/connectors.xml
 Automatic merge failed; fix conflicts and then commit the result.
 
-bms@bms MINGW64 /c/SIMO (activemq_local|MERGING)
+bms@bms MINGW64 /c/test (activemq_local|MERGING)
 $ git status
 On branch activemq_local
 You have unmerged paths.
@@ -113,18 +113,18 @@ You have unmerged paths.
 
 Changes to be committed:
 
-modified:   connectors/simo-buildin-connectors/build.gradle
-new file:   connectors/simo-buildin-connectors/src/main/java/com/uxsino/simo/collector/connections/ActiveMQConnection.java
-new file:   simo-collector-data/src/main/java/com/uxsino/simo/networkentity/target/ActiveMQTarget.java
-new file:   simo-collector/src/main/resources/config/indicators/indicator.activemq.xml
-new file:   simo-collector/src/main/resources/config/query-templates/web-server/query.activemq.xml
-modified:   simo-commons/src/main/java/com/uxsino/commons/model/ITProtocol.java
-modified:   simo-commons/src/main/java/com/uxsino/commons/model/NeClass.java
+modified:   connectors/test-buildin-connectors/build.gradle
+new file:   connectors/test-buildin-connectors/src/main/java/com/song/test/collector/connections/ActiveMQConnection.java
+new file:   test-collector-data/src/main/java/com/song/test/networkentity/target/ActiveMQTarget.java
+new file:   test-collector/src/main/resources/config/indicators/indicator.activemq.xml
+new file:   test-collector/src/main/resources/config/query-templates/web-server/query.activemq.xml
+modified:   test-commons/src/main/java/com/song/commons/model/ITProtocol.java
+modified:   test-commons/src/main/java/com/song/commons/model/NeClass.java
 
 Unmerged paths:
   (use "git add <file>..." to mark resolution)
 
-both modified:   simo-collector/src/main/resources/connectors.xml
+both modified:   test-collector/src/main/resources/connectors.xml
 
 Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)

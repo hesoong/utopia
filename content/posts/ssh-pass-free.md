@@ -6,8 +6,6 @@ toc: true
 tags: 
 - ssh
 - linux
-categories: 
-- 工作与技术
 ---
 
 当我们在启动spark集群work节点的的时候，每次都需要输入每个节点服务器的密码，这样无疑是很麻烦的。设置SSH免密后就可跳过密码输入的步骤：

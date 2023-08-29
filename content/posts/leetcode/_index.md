@@ -1,5 +1,5 @@
 ---
-title: "leetcode 系列"
+title: "Leetcode(系列)"
 date: 2023-08-24T13:57:05+08:00
 draft: false
 weight: 10

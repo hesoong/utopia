@@ -6,8 +6,6 @@ toc: true
 tags: 
 - spark 
 - 环境搭建
-categories: 
-- 工作与技术
 ---
 
 ## 环境需要

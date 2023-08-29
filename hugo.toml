@@ -69,6 +69,10 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
     tag      = "tags"
     series   = "series"
 
+# 配置自定义输出
+[outputs]
+  home = ["HTML", "JSON"]
+
 [languages.en.params]
   # title = "Song's blog"
   # subtitle = "A simple theme for Hugo"

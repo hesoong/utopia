@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 		return fuse
 	}
 
-	function render(items) {
+	function render (items) {
 		return items.map(item => {
 			item = item.item
 			return `<li class="post-item">
-        <a href="${item.permalink}">
+        <a href="${item.permalink}" class="post-item-inner">
           <span class="post-title">${item.title}</span>
           <span
             class="post-day">${item.date}</span>
@@ -94,8 +94,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 		const searchString = searchInput.value
 		const fuse = await getFuse()
 		const result = fuse.search(searchString)
-		const html = render(result)
-		updateDOM(html, result.length)
+		// distinct
+		const distinct = result.reduce((pre, cur) => pre.map(it => it.item.title).includes(cur.item.title) ? pre : [...pre, cur], []);
+		const html = render(distinct)
+		updateDOM(html, distinct.length)
 	}
 
 	function doSearch() {

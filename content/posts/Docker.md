@@ -6,7 +6,6 @@ toc: true
 comments: true
 tags:
 - docker
-categories:
 ---
 
 ## 一、Docker介绍

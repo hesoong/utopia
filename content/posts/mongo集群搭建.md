@@ -6,8 +6,6 @@ toc: true
 tags:
 - mongo集群
 - 部署
-categories: 
-- 工作与技术
 ---
 
 ## mongoDB安装

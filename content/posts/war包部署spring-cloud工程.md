@@ -6,8 +6,7 @@ toc: true
 tags:
 - spring boot
 - war包部署
-categories: 
-- 工作与技术
+
 ---
 
 最近接到一个任务：将spring cloud架构的系统部署到国产中间件：apusic(金蝶)中去。
