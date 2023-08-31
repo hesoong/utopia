@@ -13,8 +13,9 @@ tags:
 ### stash
 
 ```shell
-git stash       #备份
 git pull        #down代码
+git stash       #备份
+git stash save [<message>] #备份及添加备份信息
 git stash pop   #还原代码
 ```
 

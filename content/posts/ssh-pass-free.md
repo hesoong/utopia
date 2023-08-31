@@ -18,7 +18,7 @@ tags:
 ssh-keygen -t rsa
 ```
 
-### 分别将每台服务器生成的 /root/.ssh 目录下的公钥文件复制成 **authorized_keys**
+### 分别将每台服务器生成的 /root/.ssh 目录下的公钥文件复制成**authorized_keys**
 
 ```shell
 cp id_rsa_pub authorized_keys

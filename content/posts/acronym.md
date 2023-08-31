@@ -20,6 +20,8 @@ ACT: Activity #活性
 EFC: Efficacy #功效
 LPS: Late Phase Study #后期研究
 TED: Tolerance of ascending Dose regimen #递增剂量方案的耐受性
+
+CD: Central Data #中心数据
 ```
   
 ## Agile

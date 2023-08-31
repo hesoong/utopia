@@ -40,18 +40,14 @@ Pre-order traversal is to visit the root first. Then traverse the left subtree. 
  */
 
 func preorderTraversal(root *TreeNode) []int {
-    res := []int{}
-    if(root == nil){
-        return res
-    }
-    res = append(res, root.Val)
-    if(root.Left != nil){
-        res = append(res, preorderTraversal(root.Left)...)
-    }
-    if(root.Right != nil){
-        res = append(res, preorderTraversal(root.Right)...)
-    }
-    return res
+	res := []int{}
+	if(root == nil){
+		return res
+	}
+	res = append(res, root.Val)
+	res = append(res, preorderTraversal(root.Left)...)
+	res = append(res, preorderTraversal(root.Right)...)
+	return res
 }
 ```
 #### In-order Traversal - 中序
@@ -71,18 +67,14 @@ In-order traversal is to traverse the left subtree first. Then visit the root. F
  * }
  */
 func inorderTraversal(root *TreeNode) []int {
-    res := []int{}
-    if(root == nil){
-        return res
-    }
-    if(root.Left != nil){
-        res = append(res, inorderTraversal(root.Left)...)
-    }
-    res = append(res, root.Val)
-    if(root.Right != nil){
-        res = append(res, inorderTraversal(root.Right)...)
-    }
-    return res
+	res := []int{}
+	if(root == nil){
+		return res
+	}
+	res = append(res, inorderTraversal(root.Left)...)
+	res = append(res, root.Val)
+	res = append(res, inorderTraversal(root.Right)...)
+	return res
 }
 ```
 #### Post-order Traversal - 后序
@@ -102,20 +94,58 @@ Post-order traversal is to traverse the left subtree first. Then traverse the ri
  * }
  */
 func postorderTraversal(root *TreeNode) []int {
-    res := []int{}
+	res := []int{}
+	if(root == nil){
+		return res
+	}
+	res = append(res, postorderTraversal(root.Left)...)
+	res = append(res, postorderTraversal(root.Right)...)
+	return append(res, root.Val)
+}
+```
+#### Level Order Traversal - 层序
+
+---
+
+Level-order traversal is to traverse the tree level by level.
+
+层序遍历就是逐层遍历树。
+```go
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+func levelOrder(root *TreeNode) [][]int {
+    res := [][]int{}
     if(root == nil){
         return res
     }
-    if(root.Left != nil){
-        res = append(res, postorderTraversal(root.Left)...)
+    cur := []*TreeNode{root}
+    for len(cur) > 0 {
+        next := []*TreeNode{}
+        res_level := make([]int, len(cur))
+        for i, node := range(cur){
+            res_level[i] = node.Val
+            if(node.Left != nil){
+              next = append(next, node.Left)
+            }
+            if(node.Right != nil){
+              next = append(next, node.Right)
+            }
+        }
+        res = append(res, res_level)
+        cur = next        
     }
-    if(root.Right != nil){
-        res = append(res, postorderTraversal(root.Right)...)
-    }
-    return append(res, root.Val)
+    
+    return res
 }
 ```
 #### Recursive or Iterative
 
 ---
 递归和迭代
+

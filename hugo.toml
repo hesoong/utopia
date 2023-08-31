@@ -4,7 +4,7 @@ languageCode = "zh"
 theme        = "hello-friend-ng"
 paginate     = 10
 hasCJKLanguage = true # 字数统计添加中文支持
-enableGitInfo = true # 使能git信息
+enableGitInfo = false # 使能git信息
 googleAnalytics = "G-3X06DFVWWN"
 gitUrl = 'https://github.com/rectcircle/rectcircle-blog/commit/'
 copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
@@ -43,7 +43,7 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   # 自定义JS
   # customJS = ['/js/anchorforid.js', '/js/fuse.min.js', '/js/search.js']
   customJS = ['/js/anchorforid.js', '/js/main.js']
-
+  gitUrl = 'https://github.com/hesoong/hesoong.github.io/commit/'
   [params.logo]
     logoText = "rm -rf world"
     logoHomeLink = "/"
