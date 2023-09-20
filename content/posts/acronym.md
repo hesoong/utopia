@@ -1,9 +1,9 @@
 ---
-title: "Acronym"
+title: Acronym
 date: 2023-08-22T10:18:10+08:00
 draft: true
 toc: true
-images:
+images: 
 tags:
   - vocabulary
 ---
@@ -46,21 +46,26 @@ QA: Quality Assurance
 DCDI: Digital Clinical Data Integration
 OKR: Objective & Key Result
 I.C.E: Inpact Confidence Ease
-
+RACI Difinition:
+  Responsible: the person who is assigned to the work.
+  Accountable: the person who makes the final decision and has the ultimate ownership
+  Consulted: the person who must be consulted before a decision or action is taken
+  Informed: the person who must be informed that decision or action has been taken
+  
 ```
 
   
 ## GxP Doc.
+GxP: good practice(Clinical, laboratory, manufacturing, pharmacovigilance)
 
 ```yml
-UR:
-FRA:
-TM:
-FS:
-DS: detail 
-IP: Installation P
-IQD:
+UR: User Requirements #用户需求
+FRA: Functional Risk Assessment #功能性风险评估
+TM: Traceability Matrix #可追溯性矩阵
+FS: Functional Specification #功能规范
+DS: Detailed Specification #详细规范
+IP: Installation Procedure #安装过程/程序
+IQD: Installation Qualification Deployment
 IQR: Installation Quality Report
-
 ```
 

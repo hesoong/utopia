@@ -86,22 +86,22 @@ db.auth("root","123456")    //验证用户创建是否成功
 
    * 分别配置三台config服务的配置文件，分别在对应config server的conf目录下(/data/mongodbtest/config/conf/)创建mongo_config.conf文件
 
-     ```shell
-     storage:
-     dbPath: /data/mongodbtest/config/data
-     indexBuildRetry: true
-     systemLog:
-     destination: file
-     path: /data/mongodbtest/config/log/config.log
-     net:
-     port: 21001
-     sharding:
-     clusterRole: configsvr
-     replication:
-     replSetName: docdetection
-     processManagement:
-     fork: true
-     ```
+	 ```yml
+	 storage:
+	 dbPath: /data/mongodbtest/config/data
+	 indexBuildRetry: true
+	 systemLog:
+	 destination: file
+	 path: /data/mongodbtest/config/log/config.log
+	 net:
+	 port: 21001
+	 sharding:
+	 clusterRole: configsvr
+	 replication:
+	 replSetName: docdetection
+	 processManagement:
+	 fork: true
+	 ```
 
    * 通过配置文件分别启动config配置服务
 
@@ -142,7 +142,7 @@ db.auth("root","123456")    //验证用户创建是否成功
 
    * 分别到各服务器上各shard的conf目录下建文件mongo_config.conf。eg:192.168.1.91
 
-     ```properties
+     ```yml
      # shard1
      storage:
      dbPath: /data/mongodbtest/shard1/data
@@ -260,23 +260,22 @@ rs.initiate(config);
 
 * 配置mongos服务的配置文件，对应的conf目录下创建mongo_config.conf文件
   
-  ```properties
-  systemLog:
-  destination: file
-  path: /data/mongodbtest/mongos/log/mongos.log
-  net:
-  port: 20001
-  sharding:
-  configDB: docdetection/192.168.1.91:21001,192.168.1.92:21001,192.168.1.93:21001
-  processManagement:
-  fork: true
-  ```
+```yml
+systemLog:
+destination: file
+path: /data/mongodbtest/mongos/log/mongos.log
+net:
+port: 20001
+sharding:
+configDB: docdetection/192.168.1.91:21001,192.168.1.92:21001,192.168.1.93:21001
+processManagement:
+fork: true
+```
 
 * 通过配置文件分别启动config配置服务
-  
-  ```shell
-  mongos --config /data/mongodbtest/mongos/conf/mongo_config.conf
-  ```
+```shell
+mongos --config /data/mongodbtest/mongos/conf/mongo_config.conf
+```
   
 ### 整合配置、路由、分片服务器
   
