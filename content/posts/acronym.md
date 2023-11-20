@@ -12,7 +12,7 @@ tags:
 
 ```yml
 TA: Therapeutic Area #治疗领域
-R&D: Research & Develop
+R&D: Research & Development
 DBD/CDA: 
 CIG: Clinical Information Governance #临床信息治理
 
@@ -20,6 +20,7 @@ ACT: Activity #活性
 EFC: Efficacy #功效
 LPS: Late Phase Study #后期研究
 TED: Tolerance of ascending Dose regimen #递增剂量方案的耐受性
+BMC: BioMacker #生物标志物检测
 
 CD: Central Data #中心数据
 ```

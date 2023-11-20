@@ -52,7 +52,10 @@ git config commit.template myTemplate.template	#运行模板
 git commit --amend # 进入编辑器修改
 git commit --amend 'update information' # 直接更改为新输入的提交信息
 ```
-
+### restore
+```sh
+git restore # git restore命令是撤销的意思，也就是把文件从缓存区撤销，回到未被追踪的状态。
+```
 ### revert
 
 ```shell
@@ -158,7 +161,7 @@ Changes not staged for commit:
 [credential]
 	helper = manager
 ```
-### git status 不能显示中文
+## git status 不能显示中文
 
 问题描述：
 ```shell
@@ -173,7 +176,7 @@ Untracked files:
 ```sh
 git config --global core.quotepath false
 ```
-### git 不能使用正则（仅适用于终端使用了zsh的情况）
+## git 不能使用正则（仅适用于终端使用了zsh的情况）
 问题描述：
 ```shell
 # 使用正则匹配不能添加文件
@@ -183,4 +186,13 @@ git config --global core.quotepath false
 ```shell
 echo "setout nonomatch" >> ~/.zshrc
 source ~/.zshrc
+```
+
+## git 修改远程Repo Url
+```shell
+# 方式1 -- 直接设置 适用于新的repo 之前没有设置过url
+git remote add origin 
+# 方式2 -- 先删除 在设置
+git remote rm origin 
+git remote add origin [url]
 ```
