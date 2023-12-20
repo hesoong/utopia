@@ -209,11 +209,10 @@ scp -r "用户名@计算机IP或者计算机名称:目录名"  "本地路径"   
     -P	选择端口 . 注意 -p 已经被 rcp 使用
     -4	强行使用 IPV4 地址
     -6	强行使用 IPV6 地址
-    ```
-    
+```
 
 ## 13. linux centos7 关于防火墙操作
-    
+
 ```shell
 # 在root权限下查看防火墙状态。 
 systemctl status firewalld

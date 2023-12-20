@@ -14,6 +14,7 @@ tags:
 TA: Therapeutic Area #治疗领域
 R&D: Research & Development
 DBD/CDA: 
+CDISK
 CIG: Clinical Information Governance #临床信息治理
 
 ACT: Activity #活性
@@ -21,8 +22,10 @@ EFC: Efficacy #功效
 LPS: Late Phase Study #后期研究
 TED: Tolerance of ascending Dose regimen #递增剂量方案的耐受性
 BMC: BioMacker #生物标志物检测
+eCRF: 
 
 CD: Central Data #中心数据
+
 ```
   
 ## Agile
@@ -40,7 +43,6 @@ QA: Quality Assurance
 
 ```
 
-  
 ## Team Management
 
 ```yml
@@ -52,6 +54,8 @@ RACI Difinition:
   Accountable: the person who makes the final decision and has the ultimate ownership
   Consulted: the person who must be consulted before a decision or action is taken
   Informed: the person who must be informed that decision or action has been taken
+  
+A.A.R: (After-Action Review) is a module
   
 ```
 
