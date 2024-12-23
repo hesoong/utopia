@@ -5,7 +5,7 @@ theme        = "hello-friend-ng"
 paginate     = 10
 hasCJKLanguage = true # 字数统计添加中文支持
 enableGitInfo = false # 使能git信息
-googleAnalytics = "zk1R_fDflszaUOKvV7qvDibjk0oNE_tSXX4pct6F6hQ"
+googleAnalytics = "G-3X06DFVWWN"
 gitUrl = 'https://github.com/rectcircle/rectcircle-blog/commit/'
 copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
