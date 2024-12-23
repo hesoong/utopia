@@ -14,7 +14,7 @@ tags:
 TA: Therapeutic Area #治疗领域
 R&D: Research & Development
 DBD/CDA: 
-CDISK
+CDISK: ?
 CIG: Clinical Information Governance #临床信息治理
 
 ACT: Activity #活性
@@ -26,6 +26,20 @@ eCRF:
 
 CD: Central Data #中心数据
 
+PK: Pharmacokinetics # 药物动力学
+DM: Drug metabolism # 药物代谢
+DMPK: # 药物代谢动力学
+
+B&P (team)
+PopPK: Popular Pharmacokinetics # 群体药物动力学
+sparse: # 稀疏
+sampling： # 采样
+dummy： # 虚拟
+Full PK sampling = NCA
+NCA: Non-Compartmental Analysis
+Sparse samping = Non-NCA
+Non-NCA
+TMED: ？
 ```
   
 ## Agile
