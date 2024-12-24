@@ -1,11 +1,11 @@
 ---
-title: linux下java环境部署
+title: 部署｜linux下java环境部署
 date: 2019-01-13 13:03:24
 updated: 2019-01-13
 toc: true
 tags:
-- java
-- 环境搭建
+  - java
+  - 环境搭建
 ---
 
 ## 下载JDK安装包

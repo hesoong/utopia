@@ -1,9 +1,9 @@
 ---
-title: "Gradle笔记"
+title: 笔记｜Gradle笔记
 date: 2018-08-26T17:10:50+08:00
 draft: false
 toc: true
-images:
+images: 
 tags:
   - 笔记
 ---
