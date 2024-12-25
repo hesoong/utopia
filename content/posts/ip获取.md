@@ -1,10 +1,10 @@
 ---
-title: Java笔记
+title: 笔记｜IP 获取
 date: 2018-10-31
 updated: 2018-10-31
 toc: true
 tags:
-- 笔记
+  - 笔记
 ---
 ## 获取本机ip
 
@@ -97,8 +97,3 @@ public static int toIp(String ipAddress) {
     }
 ```
 
-## Zuul proxy file upload, file name is Chinese garbled //zuul 中文文件名乱码
-
-```shell
-https://github.com/spring-cloud/spring-cloud-netflix/issues/1385
-```
